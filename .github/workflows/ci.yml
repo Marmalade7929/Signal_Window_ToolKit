@@ -42,6 +42,27 @@ jobs:
           grep -qi "<!doctype html>" docs-site/index.html
           grep -q "Signal Window Toolkit" docs-site/index.html
 
+      - name: Validate Streamlit live app URL
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+          import sys
+
+          html = pathlib.Path("docs-site/index.html").read_text(encoding="utf-8")
+          match = re.search(r'href="(https://[A-Za-z0-9.-]+\.streamlit\.app/?[^"]*)"', html)
+          if not match:
+              print("Missing Streamlit app URL in docs-site/index.html", file=sys.stderr)
+              raise SystemExit(1)
+
+          url = match.group(1).strip()
+          if "example" in url.lower() or "placeholder" in url.lower():
+              print(f"Streamlit URL appears to be a placeholder: {url}", file=sys.stderr)
+              raise SystemExit(1)
+
+          print(f"Validated Streamlit URL: {url}")
+          PY
+
       - name: Validate deployment governance doc
         run: test -f governance/deployment_strategy.md
 

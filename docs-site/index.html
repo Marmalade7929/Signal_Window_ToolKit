@@ -79,6 +79,30 @@
     }
 
     a:hover { text-decoration: underline; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.62rem 0.9rem;
+      border-radius: 10px;
+      border: 1px solid #0a6d5c;
+      background: linear-gradient(180deg, #11a18a 0%, #0b7a68 100%);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      text-decoration: none;
+      filter: brightness(1.02);
+    }
+
+    .mono {
+      font-family: Consolas, "Courier New", monospace;
+      color: #23443e;
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
   </style>
 </head>
 <body>
@@ -87,6 +111,14 @@
       <h1>Signal Window Toolkit</h1>
       <p>Public documentation landing page for the signal integration and timing-window toolkit.</p>
       <p>Repository: <a href="https://github.com/Marmalade7929/Signal_Window_ToolKit">Marmalade7929/Signal_Window_ToolKit</a></p>
+      <a
+        class="cta"
+        href="https://signal-window-toolkit.streamlit.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Launch Live Streamlit App
+      </a>
     </section>
 
     <section class="card">
@@ -103,7 +135,14 @@
       <ul>
         <li>CI runs tests and deployment checks on pull requests and pushes.</li>
         <li>Pages workflow deploys static docs from <code>docs-site/</code> on <code>main</code>.</li>
+        <li>CI validates that this landing page includes a Streamlit live app URL.</li>
       </ul>
+    </section>
+
+    <section class="card">
+      <h2>Live App Endpoint</h2>
+      <p class="mono">https://signal-window-toolkit.streamlit.app/</p>
+      <p>If your Streamlit deployment slug changes, update this URL and keep the launch button in sync.</p>
     </section>
 
     <section class="card">
