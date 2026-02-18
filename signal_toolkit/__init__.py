@@ -1,4 +1,14 @@
 from .flow_integration import integrate_flow, integrate_flow_to_volume
+from .device_characterization import (
+    CHARACTERIZATION_SCHEMA_VERSION,
+    CharacterizationResult,
+    MeasurementRun,
+    RunSummary,
+    build_characterization,
+    load_characterization,
+    prepare_measurement_run,
+    save_characterization,
+)
 from .app_logic import (
     CycleQuality,
     build_prediction_export_frame,
@@ -21,6 +31,14 @@ from .scope_processing import (
 __all__ = [
     'integrate_flow',
     'integrate_flow_to_volume',
+    'CHARACTERIZATION_SCHEMA_VERSION',
+    'MeasurementRun',
+    'RunSummary',
+    'CharacterizationResult',
+    'prepare_measurement_run',
+    'build_characterization',
+    'save_characterization',
+    'load_characterization',
     'CycleQuality',
     'compute_drift_pct',
     'evaluate_cycle_quality',

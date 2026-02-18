@@ -31,6 +31,8 @@ streamlit run app.py
 ## Public API
 - `signal_toolkit.integrate_flow(...)`
 - `signal_toolkit.integrate_flow_to_volume(...)`
+- `signal_toolkit.build_characterization(...)`
+- `signal_toolkit.prepare_measurement_run(...)`
 - `signal_toolkit.parse_scope_csv(...)`
 - `signal_toolkit.extract_fault_cycles(...)`
 - `signal_toolkit.detect_ail_windows(...)`
