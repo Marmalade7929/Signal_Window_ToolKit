@@ -17,6 +17,7 @@ python -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 python -m pytest tests -q
+streamlit run app.py
 ```
 
 ## Documentation site
