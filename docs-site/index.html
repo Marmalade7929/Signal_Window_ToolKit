@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Window Toolkit Docs</title>
+  <style>
+    :root {
+      --bg: #f3f6f4;
+      --ink: #0f1f1c;
+      --muted: #38514b;
+      --panel: #ffffff;
+      --accent: #0c8a75;
+      --line: #d9e5e2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, #d9eee8 0%, transparent 40%),
+        radial-gradient(circle at 90% 20%, #d7e8f6 0%, transparent 35%),
+        linear-gradient(180deg, #edf4f1 0%, var(--bg) 100%);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.4rem 1.2rem 3.2rem;
+    }
+
+    .hero, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(15, 31, 28, 0.07);
+      padding: 1.2rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    h1, h2 {
+      margin: 0 0 0.7rem;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.2rem; }
+
+    p {
+      margin: 0 0 0.8rem;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 0.45rem; }
+
+    code {
+      background: #ebf4f1;
+      color: #134f44;
+      border-radius: 4px;
+      padding: 0.08rem 0.35rem;
+      font-family: Consolas, "Courier New", monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Signal Window Toolkit</h1>
+      <p>Public documentation landing page for the signal integration and timing-window toolkit.</p>
+      <p>Repository: <a href="https://github.com/Marmalade7929/Signal_Window_ToolKit">Marmalade7929/Signal_Window_ToolKit</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Core APIs</h2>
+      <ul>
+        <li><code>integrate_flow</code> and <code>integrate_flow_to_volume</code> for numeric flow integration.</li>
+        <li><code>parse_scope_csv</code> for robust CSV scope parsing across delimiters and edge cases.</li>
+        <li><code>extract_fault_cycles</code> and <code>detect_ail_windows</code> for timing and window extraction.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Validation and Checks</h2>
+      <ul>
+        <li>CI runs tests and deployment checks on pull requests and pushes.</li>
+        <li>Pages workflow deploys static docs from <code>docs-site/</code> on <code>main</code>.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Local Run</h2>
+      <p><code>python -m pip install -r requirements.txt</code></p>
+      <p><code>python -m pytest tests -q</code></p>
+    </section>
+  </main>
+</body>
+</html>

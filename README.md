@@ -19,6 +19,10 @@ python -m pip install -r requirements.txt
 python -m pytest tests -q
 ```
 
+## Documentation site
+- GitHub Pages: `https://marmalade7929.github.io/Signal_Window_ToolKit/`
+- Source content: `docs-site/index.html`
+
 ## Public API
 - `signal_toolkit.integrate_flow(...)`
 - `signal_toolkit.integrate_flow_to_volume(...)`

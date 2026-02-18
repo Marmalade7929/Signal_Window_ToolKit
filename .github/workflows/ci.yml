@@ -29,3 +29,21 @@ jobs:
           PYTHONUTF8: "1"
           PYTHONIOENCODING: "utf-8"
         run: python -m pytest tests -q
+
+  deployment-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate docs site artifact
+        run: |
+          test -f docs-site/index.html
+          grep -qi "<!doctype html>" docs-site/index.html
+          grep -q "Signal Window Toolkit" docs-site/index.html
+
+      - name: Validate deployment governance doc
+        run: test -f governance/deployment_strategy.md
+
+      - name: Validate pages workflow definition
+        run: test -f .github/workflows/pages.yml
