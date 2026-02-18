@@ -20,8 +20,7 @@ Define minimum controls for promoting work from the private source repository to
 ## Required Evidence Before Publish
 1. Passing CI on the export candidate.
 2. Completed `governance/publish_checklist.md`.
-3. External counsel sign-off file in `governance/signoffs/`.
 
 ## Retention
-- Keep sign-off artifacts in version control for traceability.
+- Keep completed checklist state and CI evidence for traceability.
 - Keep export reports as release evidence artifacts.
