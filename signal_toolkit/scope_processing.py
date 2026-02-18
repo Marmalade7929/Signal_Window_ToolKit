@@ -1,4 +1,4 @@
-"""Oscilloscope timing helpers for bubble prediction."""
+"""Oscilloscope timing helpers for timing-window analysis."""
 from __future__ import annotations
 
 import logging
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class DetectionWindow:
-    """Continuous interval where the AIL signal is below threshold (bubble transit)."""
+    """Continuous interval where the AIL signal is below threshold."""
 
     start_s: float
     end_s: float
@@ -659,7 +659,7 @@ def detect_ail_windows(
     threshold: float = 1.0,
     min_duration_s: float = 0.01,
 ) -> List[DetectionWindow]:
-    """Identify continuous windows where the AIL signal falls below the threshold (bubble transit)."""
+    """Identify continuous windows where the AIL signal falls below the threshold."""
     if time.size == 0:
         return []
 
