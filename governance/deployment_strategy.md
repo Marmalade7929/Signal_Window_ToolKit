@@ -13,6 +13,7 @@
 2. Deployment checks confirm:
    - `docs-site/index.html` exists and is valid HTML entrypoint.
    - `.github/workflows/pages.yml` exists.
+   - Repository Pages setting remains `GitHub Actions` with source `main` and path `/`.
 3. `PR Signal Gate` passes for PR narrative and commit standards.
 
 ## Rollback path

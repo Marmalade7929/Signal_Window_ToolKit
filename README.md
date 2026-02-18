@@ -24,6 +24,9 @@ python -m pytest tests -q
 - Live Streamlit app: `https://signal-window-toolkit.streamlit.app/`
 - Source content: `docs-site/index.html`
 
+## Public migration roadmap
+- PR-by-PR migration plan: `governance/public_migration_backlog.md`
+
 ## Public API
 - `signal_toolkit.integrate_flow(...)`
 - `signal_toolkit.integrate_flow_to_volume(...)`
