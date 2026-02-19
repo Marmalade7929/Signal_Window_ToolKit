@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo Governance Assistant"
+  short_description: "Policy-safe repo governance with consistent output."
+  default_prompt: "Use $repo-governance-assistant for governance-aware work that stays flexible but output-consistent."

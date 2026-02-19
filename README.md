@@ -28,6 +28,23 @@ streamlit run app.py
 ## Public migration roadmap
 - PR-by-PR migration plan: `governance/public_migration_backlog.md`
 
+## Reuse governance pack
+The simplest portable option is the folder `governance_pack/`.
+
+1. Copy `governance_pack/` into the target repo.
+2. From the target repo root, run:
+
+```bash
+bash governance_pack/install_here.sh
+```
+
+Preview or overwrite:
+
+```bash
+bash governance_pack/install_here.sh --dry-run
+bash governance_pack/install_here.sh --force
+```
+
 ## Public API
 - `signal_toolkit.integrate_flow(...)`
 - `signal_toolkit.integrate_flow_to_volume(...)`

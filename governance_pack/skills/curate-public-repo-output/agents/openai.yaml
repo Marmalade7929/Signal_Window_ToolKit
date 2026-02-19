@@ -1,0 +1,5 @@
+interface:
+  display_name: "Public Signal Curator"
+  short_description: "Curate PRs and commits for portfolio signal."
+  default_prompt: "Use $curate-public-repo-output to curate this branch into a high-signal public PR package."
+
